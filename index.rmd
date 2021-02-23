@@ -1,0 +1,114 @@
+---
+title: "What is a package?"
+author: "Megsie Siple"
+date: "February 23, 2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+# What is a package?
+
+- the fundamental unit of shareable code
+
+```{r eval = FALSE}
+# You install them like this:
+install.packages("x")
+
+# You load them like this:
+library("x")
+
+# ... and you can get help on them by using
+package?x
+# or
+help("x")
+```
+
+---
+# There are lots of ways to share code
+
+  - email it to your collaborators
+
+--
+
+  - put it on a github repo and go nuts
+
+--
+
+  - ...other ways?
+ 
+---
+# ...so why packages?
+
+--
+
+- sharing reasons: easy for others to download, use, and learn about
+
+--
+
+- non-sharing reasons!
+
+--
+
+  - to organize your code
+  
+--
+
+  - to make robust code that is less likely to break (yay!)
+
+---
+# How do I do it?
+
+
+---
+# The most basic developer toolbox
+
+**Setup**: 
+
+`{usethis}` automates setup and other repetitive dev tasks
+
+`{roxygen2}` writes documentation and formats it the way you need `r emo::ji("kiss")`
+
+
+**Testing and checking**
+
+`{testthat}` performs tests
+
+`{goodpractice}` automates checks for style AND content (e.g., outputs from `R CMD check`)
+
+![image1](https://usethis.r-lib.org/reference/figures/logo.png)
+![image2](https://github.com/MangoTheCat/goodpractice/raw/master/man/figures/logo.png)
+
+---
+# Interested in package development?
+
+- Some fun RStudio::global talks on package development
+
+--
+
+  - [You're Already Ready: Zen and the Art of Package Development](https://rstudio.com/resources/rstudioglobal-2021/youre-already-ready-zen-and-the-art-of-r-package-development/) by Malcolm Barrett
+
+  - [Make a package - Make some friends](https://rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/) by Athanasia M. Mowinckel
+
+-- 
+
+- Volunteer to be a reviewer for [rOpenSci](https://ropensci.org/software-review/)
+
+---
+
+# Thank you!
