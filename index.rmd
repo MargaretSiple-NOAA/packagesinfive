@@ -15,11 +15,11 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-image: url(https://www.ghibli.jp/gallery/ponyo023.jpg)
 
 ???
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+Image credit: [Studio Ghibli](https://www.ghibli.jp/works/ponyo/#frame&gid=1&pid=23)
 
 ---
 # What is a package?
@@ -71,28 +71,84 @@ help("x")
 
   - to make robust code that is less likely to break (yay!)
 
+
+---
+#Why do other people do it?
+
+.center[![megise](img/unnamed.png)]
+
 ---
 # How do I do it?
 
+---
+
+.center[![allison](img/horst_usethis.jpg)]
+Image: Allison Horst
+
 
 ---
+
+# Creating your first R package :)
+
+```{r eval=FALSE}
+library(usethis)
+create_tidy_package("~/git_projects/mypackage")
+```
+
+---
+
+# Creating your first R package :)
+
+Once you `create_tidy_package()`, you will have a working directory that looks like this:
+
+```
+-- R
+-- tests
+-- DESCRIPTION
+-- NAMESPACE
+-- cran-comments.md
+-- LICENSE.md
+-- README.Rmd
+-- README.md
+```
+
+---
+# Creating your first R package
+Set up a git repo for your package using `usethis`:
+
+```{r eval=FALSE}
+use_git()
+use_github()
+```
+
+--
+
+Once you've run the code above, all you have to do is run:
+```{r eval=FALSE}
+devtools::install_github("{github_username}/{packagename}")
+```
+
+.... and you can install your R package on a computer! 
+
+---
+
 # The most basic developer toolbox
 
-**Setup**: 
+**Setup** 
+
+`{devtools}` 
 
 `{usethis}` automates setup and other repetitive dev tasks
 
 `{roxygen2}` writes documentation and formats it the way you need `r emo::ji("kiss")`
 
 
-**Testing and checking**
+**Testing and checking** 
 
 `{testthat}` performs tests
 
 `{goodpractice}` automates checks for style AND content (e.g., outputs from `R CMD check`)
 
-![image1](https://usethis.r-lib.org/reference/figures/logo.png)
-![image2](https://github.com/MangoTheCat/goodpractice/raw/master/man/figures/logo.png)
 
 ---
 # Interested in package development?
@@ -105,10 +161,14 @@ help("x")
 
   - [Make a package - Make some friends](https://rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/) by Athanasia M. Mowinckel
 
--- 
+--
 
 - Volunteer to be a reviewer for [rOpenSci](https://ropensci.org/software-review/)
 
 ---
 
 # Thank you!
+
+margaret.siple@noaa.gov
+
+github: @mcsiple
